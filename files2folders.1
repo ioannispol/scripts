@@ -1,0 +1,33 @@
+.\" Manpage for files2folders.
+.\" Contact ioannis@polymenis.xyz to correct errors or typos.
+.TH files2folders 1 "January 1, 2023" "1.0" "files2folders man page"
+.SH NAME
+files2folders \- create folders based on the name of files in the current directory
+.SH SYNOPSIS
+files2folders [-h] [-m | -c | -n] [-p prefix]
+.SH DESCRIPTION
+files2folders is a bash script that creates folders based on the name of files in the current directory. The script provides several options for the user to specify how the files should be handled.
+.SH OPTIONS
+.IP "\fB-h\fR" 4
+Show this help
+.IP "\fB-m\fR" 4
+Move the file
+.IP "\fB-c\fR" 4
+Copy the file
+.IP "\fB-n\fR" 4
+Not move the file
+.IP "\fB-p prefix\fR" 4
+Specify custom prefix for the folder name
+.SH EXAMPLES
+files2folders -m -p "rs_"
+.RS 4
+Moves all files in the current directory to folders named with a "rs_" prefix and the base name of the file
+.RE
+files2folders -c -p "test_"
+.RS 4
+Copies all files in the current directory to folders named with a "test_" prefix and the base name of the file
+.RE
+.SH AUTHOR
+Written by Ioannis Polymenis.
+.SH CONTACT
+For more information or help, contact ioannis@polymenis.xyz
