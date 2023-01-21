@@ -1,8 +1,23 @@
 #!/bin/bash
 
+# Script Name: files2folders.sh
+# Purpose: This script creates folders based on the names of the files in the current directory, and can also add a prefix to the folder names. 
+# Author: Ioannis Polymenis
+# Date: 01-01-2022
+
+# Usage: files2folders.sh [-h] [-p <prefix>] [-m | -c | -n]
+# Synopsis: files2folders.sh [-h] [-p <prefix>] [-m | -c | -n]
+# Arguments:
+#   -h      Show this help message
+#   -p      Prefix to add to the folder names
+#   -m      Move files to their corresponding folders
+#   -c      Copy files to their corresponding folders
+#   -n      Do not move or copy files, only create folders
+# Note: The script will prompt the user for confirmation before creating the folders, and will only operate on files in the current directory, not subdirectories.
+
 # Function to display script usage
 usage() {
-    echo "Usage: create_folders_from_files [-h] [-m | -c | -n] [-p prefix]"
+    echo "Usage: files2folders [-h] [-m | -c | -n] [-p prefix]"
     echo "  -h : Show this help"
     echo "  -m : Move the file"
     echo "  -c : Copy the file"
@@ -79,4 +94,4 @@ for file in *; do
 done
 
 # Log the help message
-echo "create_folders_from_files [-h] [-m | -c | -n] [-p prefix]" >> log.txt
+echo "files2folders [-h] [-m | -c | -n] [-p prefix]" >> log.txt
